@@ -1,13 +1,14 @@
-import { BottomBarModule } from './bottom-bar/bottom-bar.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Page404Component } from './page404/page404.component';
+import { BottomBarModule } from './bottom-bar/bottom-bar.module';
+import { Page404Module } from './page404/page404.module';
+
 
 
 export const appRoutes = [
   { path: 'bottom-bar', name: 'Bottom Bar', loadChildren: () => BottomBarModule },
-  { path: 'page-404', name: 'Page 404', component: Page404Component },
+  { path: 'page-404', name: 'Page 404', loadChildren: () => Page404Module },
 ];
 
 @NgModule({
