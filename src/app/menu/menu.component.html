@@ -1,0 +1,8 @@
+<ul class="bd-links app-menu__list">
+  <li *ngFor="let route of routes">
+    <div class="bd-toc-item app-menu__item mb-4">
+      <a routerLink="/{{route.path}}" class="bd-toc-link app-menu__link">{{ route.name }}</a>
+    </div>
+  </li>
+</ul>
+
