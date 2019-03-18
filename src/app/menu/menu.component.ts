@@ -1,4 +1,4 @@
-import { appRoutes } from './../app-routing.module';
+import { r as routes } from './../app-routing.module';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  routes = appRoutes.filter(r => r.show);
+
+  routes: Array<any> = routes;
 
   ngOnInit() {
   }
