@@ -8,9 +8,9 @@ export const BottomRoute = () => BottomBarModule;
 export const Page404Route = () => Page404Module;
 
 export const appRoutes = [
-  { path: '', name: 'Bottom Bar', loadChildren: BottomRoute, data: { state: 'bottom' }, show: false },
-  { path: 'bottom', name: 'Bottom Bar', loadChildren: BottomRoute, data: { state: 'bottom'}, show: true },
-  { path: 'page404', name: 'Page 404', loadChildren: Page404Route, data: { state: 'page404'}, show: true },
+  { path: '', name: 'Bottom Bar', loadChildren: './bottom-bar/bottom-bar.module#BottomBarModule', data: { state: 'bottom' }, show: false },
+  { path: 'bottom', name: 'Bottom Bar', loadChildren: './bottom-bar/bottom-bar.module#BottomBarModule', data: { state: 'bottom'}, show: true },
+  { path: 'page404', name: 'Page 404', loadChildren: './page404/page404.module#Page404Module', data: { state: 'page404'}, show: true },
 ];
 
 @NgModule({
