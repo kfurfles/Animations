@@ -22,6 +22,7 @@ import { Page404Module } from './page404/page404.module';
     Page404Module
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
