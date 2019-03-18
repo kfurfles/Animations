@@ -2,4 +2,44 @@
   min-height: 100vh;
   margin: 0 -15px;
   background-color: #51e1c2;
+
+  &__bar{
+    border-radius: 0px 0px 25px 25px;
+    padding: 48px 38px 20px;;
+    background-color: white;
+  }
+
+  &__nav-bar{
+    height: 9px;
+    width: 80%;
+    background-color: #51e1c2;
+    opacity: .5;
+    border-radius: 25px;
+  }
 }
+
+.icon{
+  &__message{
+    margin: auto;
+    color: #e9e9e7;
+    text-align: center;
+    height: 0;
+    position: relative;
+    top: 25px;
+    opacity: 0;
+    visibility: visible;
+  }
+}
+
+.active{
+  .icon__message{
+    top: 5px;
+    color: #51e1c2;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+    top: 5px;
+  }
+
+}
+

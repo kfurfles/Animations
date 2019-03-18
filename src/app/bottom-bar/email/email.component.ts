@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { DefaultBehavior } from './../classes/DefaultBehavior';
+import { Component, ViewEncapsulation, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
-  styleUrls: ['./email.component.scss']
+  styleUrls: ['./email.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class EmailComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class EmailComponent extends DefaultBehavior {
 
 }

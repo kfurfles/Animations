@@ -1,3 +1,4 @@
+import { DefaultBehavior } from './../classes/DefaultBehavior';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent extends DefaultBehavior {
 
-  constructor() { }
-
-  ngOnInit() {
+  animate(): void {
+    const { classList } = this.iconRef.nativeElement;
+    classList.add('animate');
+    setTimeout(() => {
+      classList.remove('animate');
+    }, 2000);
   }
-
 }

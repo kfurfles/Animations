@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-bottom-bar',
   templateUrl: './bottom-bar.component.html',
-  styleUrls: ['./bottom-bar.component.scss']
+  styleUrls: ['./bottom-bar.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class BottomBarComponent implements OnInit {
-
+export class BottomBarComponent {
+  selectedIcon = '';
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

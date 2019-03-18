@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  routes = appRoutes;
+  routes = appRoutes.filter(r => r.show);
 
   ngOnInit() {
   }
