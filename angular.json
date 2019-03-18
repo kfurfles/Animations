@@ -26,6 +26,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "lazyModules": [
+              "src/app/bottom-bar/bottom-bar.module",
+              "src/app/page404/page404.module"
+            ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/app/scss/mixins/animation.css",
