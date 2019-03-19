@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-center align-items-center bottom-bar">
   <div class="bottom-bar__bar">
     <div class="d-flex justify-content-center align-items-center bottom-bar__icon-list">
-      <app-email class="mr-6" (click)="selectedIcon = 'email'" [active]="selectedIcon === 'email'"></app-email>
-      <app-team class="mr-6" (click)="selectedIcon = 'team'" [active]="selectedIcon === 'team'"></app-team>
-      <app-chat class="mr-6" (click)="selectedIcon = 'chat'" [active]="selectedIcon === 'chat'"></app-chat>
-      <app-menu (click)="selectedIcon = 'menu'" [active]="selectedIcon === 'menu'"></app-menu>
+      <app-email class="mr-6 pointer" (click)="selectedIcon = 'email'" [active]="selectedIcon === 'email'"></app-email>
+      <app-team class="mr-6 pointer" (click)="selectedIcon = 'team'" [active]="selectedIcon === 'team'"></app-team>
+      <app-chat class="mr-6 pointer" (click)="selectedIcon = 'chat'" [active]="selectedIcon === 'chat'"></app-chat>
+      <app-menu class="pointer" (click)="selectedIcon = 'menu'" [active]="selectedIcon === 'menu'"></app-menu>
       <!-- <app-menu (click)="selectedIcon = 'menu'" [active]="selectedIcon === 'menu'"></app-menu> -->
     </div>
     <div class="bottom-bar__nav-bar mt-5 ml-auto mr-auto"></div>

@@ -24,7 +24,7 @@ export const r = [
   //   data: { state: 'page404' },
   //   show: true,
   // },
-  { path: '**', redirectTo: 'bottom', pathMatch: 'full' }
+  { path: '**', redirectTo: 'bottom', pathMatch: 'full', show: false }
 ];
 
 @NgModule({
