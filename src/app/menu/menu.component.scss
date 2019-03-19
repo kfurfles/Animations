@@ -1,7 +1,24 @@
+.desktop-menu{
+  @media (min-width: 992px) {
+    display: block !important;
+  }
+}
+
+.mobile-menu{
+  position: relative;
+  z-index: 999;
+  margin: -25px -20px;
+  @media (min-width: 992px) {
+    display: none !important;
+  }
+}
 .app-menu{
   &__list{
+    display: none;
     list-style: none;
     padding-left: 0px;
+    position: relative;
+    z-index: 9999;
   }
 
   &__item{
@@ -37,6 +54,7 @@
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 4000ms;
 
     &:hover{
+      color: white;
       text-decoration: none;
     }
   }
