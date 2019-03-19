@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  routes: Array<any> = routes;
+  routes: Array<any> = routes.filter(r => r.show);
 
   ngOnInit() {
   }
