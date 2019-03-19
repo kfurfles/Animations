@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "save": "git add . && git commit -m \"generic cli message\"",
     "saveOnServer": "git push",
-    "publish": "ng build --prod --output-path docs --base-href=\"https://kfurfles.github.io/Animations/docs/\" && npm run saveOnServer"
+    "publish": "npm run save && ng build --prod --output-path docs --base-href=\"https://kfurfles.github.io/Animations/docs/\" && npm run saveOnServer"
   },
   "private": true,
   "dependencies": {
