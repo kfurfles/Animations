@@ -8,8 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "save": "git add . && git commit -m \"generic cli message\" && git push",
-    "publish": "ng build --prod --output-path docs --base-href='https://kfurfles.github.io/Animations/docs/'"
+    "save": "git add . && git commit -m \"generic cli message\" && npm run saveOnServer",
+    "saveOnServer": "git push",
+    "publish": "ng build --prod --output-path docs --base-href=\"https://kfurfles.github.io/Animations/docs/\" && npm run saveOnServer"
   },
   "private": true,
   "dependencies": {
