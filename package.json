@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "save": "git add . && git commit -m \"generic cli message\"",
     "saveOnServer": "git push",
-    "publish": "npm run save && ng build --prod --output-path docs --base-href=\"https://kfurfles.github.io/Animations/docs/\" && npm run saveOnServer"
+    "publish": "ng build --prod --base-href \"https://kfurfles.github.io/Animations/\" && npx angular-cli-ghpages --dir=dist/animations --branch=gh-pages"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +37,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.5.0",
     "connect": "^3.6.6",
     "jasmine-core": "~2.99.1",
