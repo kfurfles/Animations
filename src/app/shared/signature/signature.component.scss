@@ -6,8 +6,17 @@
   flex-flow: column;
   font-size: 23px;
 
-  a{
+  a {
     color: #fff;
+  }
+
+
+  &.black{
+    a {
+      color: #333;
+    }
+  }
+  a{
 
     &.author{
       &:before{

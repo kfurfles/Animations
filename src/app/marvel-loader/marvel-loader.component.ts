@@ -11,6 +11,12 @@ import $ from 'node_modules/jquery/dist/jquery.min.js'
   styleUrls: ['./marvel-loader.component.scss']
 })
 export class MarvelLoaderComponent implements OnInit{
+  sourceDefts = {
+    authorTwitter: 'enmiemc',
+    siteName: 'Uplabs',
+    siteUrl: 'https://www.uplabs.com/posts/tab-bar-micro-interaction'
+  };
+
   indice; leave; i; stopLooping; interval;
 
   ngOnInit(): void {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '@app/shared/shared.module';
 
 import { MarvelLoaderRoutingModule } from './marvel-loader-routing.module';
 import { MarvelLoaderComponent } from './marvel-loader.component';
@@ -9,10 +10,17 @@ import { IronManComponent } from './iron-man/iron-man.component';
 import { WolverineComponent } from './wolverine/wolverine.component';
 
 @NgModule({
-  declarations: [MarvelLoaderComponent, CaptainAmericaComponent, SpiderManComponent, IronManComponent, WolverineComponent],
+  declarations: [
+    MarvelLoaderComponent,
+    CaptainAmericaComponent,
+    SpiderManComponent,
+    IronManComponent,
+    WolverineComponent
+  ],
   imports: [
     CommonModule,
-    MarvelLoaderRoutingModule
+    MarvelLoaderRoutingModule,
+    SharedModule,
   ]
 })
 export class MarvelLoaderModule { }

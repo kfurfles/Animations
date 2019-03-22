@@ -14,6 +14,7 @@ interface Signature{
 export class SignatureComponent implements OnChanges {
 
   @Input() signature: Signature;
+  @Input() color: Signature;
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
