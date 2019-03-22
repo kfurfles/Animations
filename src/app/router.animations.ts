@@ -1,4 +1,4 @@
-import {trigger, animate, style, group, query, transition} from '@angular/animations';
+import {trigger, animate, style, group, query, transition, stagger} from '@angular/animations';
 const color = {
   GREEN: 'lightgreen',
   BLUE: 'lightblue',
@@ -7,8 +7,10 @@ const color = {
 
 
 export const routerTransition = trigger('routerTransition', [
-  transition('* => bottom', [
+  transition('* <=> *', [
     query(':enter, :leave', style({ position: 'fixed', width:'100%' })
+      , { optional: true }),
+    query('.block', style({ opacity: 0 })
       , { optional: true }),
     group([
       query(':enter', [
@@ -17,22 +19,12 @@ export const routerTransition = trigger('routerTransition', [
       ], { optional: true }),
       query(':leave', [
         style({ transform: 'translateX(0%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
+        animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))
       ], { optional: true }),
-    ])
-  ]),
-  transition('* => page404', [
-    group([
-      query(':enter, :leave', style({ position: 'fixed', width:'100%' })
-      , { optional: true }),
-      query(':enter', [
-        style({ transform: 'translateX(10%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
-      ], { optional: true }),
-      query(':leave', [
-        style({ transform: 'translateX(0%)' }),
-        animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
-      ], { optional: true }),
-    ])
+    ]),
+    query(':enter .block', stagger(400, [
+      style({ transform: 'translateY(100px)' }),
+      animate('1s ease-in-out', style({ transform: 'translateY(0px)', opacity: 1 })),
+    ]), { optional: true }),
   ])
 ])
