@@ -12,9 +12,9 @@ import $ from 'node_modules/jquery/dist/jquery.min.js'
 })
 export class MarvelLoaderComponent implements OnInit{
   sourceDefts = {
-    authorTwitter: 'enmiemc',
-    siteName: 'Uplabs',
-    siteUrl: 'https://www.uplabs.com/posts/tab-bar-micro-interaction'
+    authorTwitter: 'SamAtmoreMedia',
+    siteName: 'Dribbble',
+    siteUrl: 'https://dribbble.com/shots/2457054-Marvel-Loader'
   };
 
   indice; leave; i; stopLooping; interval;
