@@ -8,6 +8,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class BottomBarComponent {
   selectedIcon = '';
+  sourceDefts = {
+    authorTwitter: 'enmiemc',
+    siteName: 'Uplabs',
+    siteUrl: 'https://www.uplabs.com/posts/tab-bar-micro-interaction'
+  };
   constructor() { }
 
 }

@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page404Component implements OnInit {
 
+  sourceDefts = {
+    authorTwitter: 'natesh113',
+    siteName: 'Uplabs',
+    siteUrl: 'https://www.uplabs.com/posts/404-error-page-2a7c1c48-9828-4fd5-a95c-a13c74d8236a'
+  };
   constructor() { }
 
   ngOnInit() {

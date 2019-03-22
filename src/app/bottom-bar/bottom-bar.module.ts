@@ -2,13 +2,14 @@ import { ChatComponent } from './chat/chat.component';
 import { MenuComponent } from './menu/menu.component';
 import { BottomBarComponent } from './bottom-bar.component';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
 
 import { BottomBarRoutingModule } from './bottom-bar-routing.module';
 import { EmailComponent } from './email/email.component';
 import { TeamComponent } from './team/team.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,13 @@ import { TeamComponent } from './team/team.component';
     EmailComponent,
     MenuComponent,
     ChatComponent,
-    TeamComponent
+    TeamComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    BottomBarRoutingModule
+    BottomBarRoutingModule,
+    SharedModule,
   ]
 })
 export class BottomBarModule { }
