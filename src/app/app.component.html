@@ -3,7 +3,7 @@
     <div class="col-md-2 only-desktop">
       <div class="app-menu"></div>
     </div>
-    <div class="col container-fluid" [@routerTransition]="getState(o)">
+    <div class="col container-fluid router" [@routerTransition]="getState(o)">
       <router-outlet  #o="outlet"></router-outlet>
     </div>
   </div>

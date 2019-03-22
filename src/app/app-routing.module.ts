@@ -17,14 +17,14 @@ export const r = [
     data: { state: 'bottom' },
     show: true
   },
-  // {
-  //   path: 'page404',
-  //   name: 'Page 404',
-  //   loadChildren: environment.production ? './page404/page404.module#Page404Module' : Page404RouteExported,
-  //   data: { state: 'page404' },
-  //   show: true,
-  // },
-  { path: '**', redirectTo: 'bottom', pathMatch: 'full', show: false }
+  {
+    path: 'page404',
+    name: 'Page 404',
+    loadChildren: environment.production ? './page404/page404.module#Page404Module' : Page404RouteExported,
+    data: { state: 'page404' },
+    show: true,
+  },
+  { path: '**', redirectTo: 'page404', pathMatch: 'full', show: false }
 ];
 
 @NgModule({

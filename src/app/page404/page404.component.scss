@@ -1,0 +1,35 @@
+.page404 {
+  background: url('/assets/images/page404/404bg.png') #1c3557;
+  margin: 0 -15px;
+  min-height: calc(100vh - 56px);
+  background-size: cover;
+  font-family: 'BentonSans';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    min-height: 100vh;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    top: -50px;
+  }
+
+  &__mj{
+    position: relative;
+    bottom: -23px;
+    width: 27px;
+
+    @media (min-width: 425px) {
+      bottom: -40px;
+      width: 40px;
+    }
+
+  }
+}
