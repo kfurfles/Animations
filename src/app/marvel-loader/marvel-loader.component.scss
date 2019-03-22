@@ -24,6 +24,7 @@
   position: absolute;
   overflow: hidden;
   border-radius: 50%;
+  opacity: 0;
 
   &-container{
       width: 150px;
@@ -45,7 +46,13 @@
   }
 
   &.enter{
-      z-index: 2;
+    z-index: 1010;
+    opacity: 1;
+  }
+
+  &.out{
+  opacity: 1;
+  z-index: 1000;
   }
 
   &.captain{
