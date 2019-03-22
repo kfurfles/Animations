@@ -12,6 +12,7 @@ export const Page404RouteExported = () => Page404Module;
 export const MarvelRouterRouteExported = () => MarvelLoaderModule;
 
 export const r = [
+  { path: '', redirectTo: 'bottom', pathMatch: 'full', show: false },
   {
     path: 'bottom',
     name: 'Bottom Bar',
