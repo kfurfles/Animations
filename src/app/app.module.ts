@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Page404Module } from './page404/page404.module';
+import { CircleLoaderModule } from './circle-loader/circle-loader.module';
+import { MarvelLoaderModule } from './marvel-loader/marvel-loader.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { Page404Module } from './page404/page404.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     BottomBarModule,
-    Page404Module
+    MarvelLoaderModule,
+    Page404Module,
+    CircleLoaderModule
   ],
   providers: [],
   exports: [],

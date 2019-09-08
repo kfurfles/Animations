@@ -1,0 +1,14 @@
+<div>
+  <div class="buttons">
+    <button id="start" class="btn btn-outline-primary" (click)="toggle('add')">Start</button>
+    <button id="stop" class="btn btn-outline-info" (click)="toggle('remove')">Stop</button>
+  </div>
+  <div class="loader" [ngClass]="statusClass">
+    <div class="wrapper">
+      <div class="loader__circle is--blue is--top is--left"></div>
+      <div class="loader__circle is--red  is--top is--right"></div>
+      <div class="loader__circle is--green  is--bottom is--left"></div>
+      <div class="loader__circle is--yellow  is--bottom is--right"></div>
+    </div>
+  </div>
+</div>

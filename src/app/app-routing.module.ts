@@ -6,10 +6,12 @@ import { BottomBarModule } from './bottom-bar/bottom-bar.module';
 import { Page404Module } from './page404/page404.module';
 import { MarvelLoaderModule } from './marvel-loader/marvel-loader.module';
 import { environment } from '../environments/environment';
+import { CircleLoaderModule } from './circle-loader/circle-loader.module';
 
 export const BottomRouteExported = () => BottomBarModule;
 export const Page404RouteExported = () => Page404Module;
 export const MarvelRouterRouteExported = () => MarvelLoaderModule;
+export const CircleLoaderRouterRouteExported = () => CircleLoaderModule;
 
 export const r = [
   { path: '', redirectTo: 'bottom', pathMatch: 'full', show: false },
@@ -34,12 +36,20 @@ export const r = [
     data: { state: 'marvel-loader' },
     show: true,
   },
+  {
+    path: 'circle-loader',
+    name: 'Spin Loader',
+    loadChildren: environment.production ? './circle-loader/circle-loader.module#CircleLoaderModule' : CircleLoaderRouterRouteExported,
+    data: { state: 'loader' },
+    show: true,
+  },
   { path: '**', redirectTo: 'page404', pathMatch: 'full', show: false }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(r, {
-    useHash: false
+    useHash: false,
+    // enableTracing: xtrue,
   })],
   exports: [RouterModule]
 })
