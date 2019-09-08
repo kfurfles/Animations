@@ -1,10 +1,14 @@
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
 .buttons{
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: calc(50% - 100px);
-  left: 50%;
-  transform: translate(-50%,-50%);
 
   button{
       margin: 0 15px;
@@ -21,10 +25,7 @@
 }
 
 .loader {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 50px;
   opacity: 0;
   visibility: hidden;
   transition: linear .5s all;
